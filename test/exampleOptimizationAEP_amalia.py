@@ -83,15 +83,15 @@ if __name__ == "__main__":
 
     # set up optimizer
     prob.driver = pyOptSparseDriver()
-    prob.driver.options['optimizer'] = 'SNOPT'
+    prob.driver.options['optimizer'] = 'PSQP'
     prob.driver.add_objective('obj', scaler=1E-5)
 
     # set optimizer options
     # prob.driver.opt_settings['Verify level'] = 3
-    prob.driver.opt_settings['Print file'] = 'SNOPT_print_exampleOptAEP_amalia.out'
-    prob.driver.opt_settings['Summary file'] = 'SNOPT_summary_exampleOptAEP_amalia.out'
-    prob.driver.opt_settings['Major iterations limit'] = 1000
-    prob.driver.opt_settings['Major optimality tolerance'] = 1E-5
+    # prob.driver.opt_settings['Print file'] = 'SNOPT_print_exampleOptAEP_amalia.out'
+    # prob.driver.opt_settings['Summary file'] = 'SNOPT_summary_exampleOptAEP_amalia.out'
+    # prob.driver.opt_settings['Major iterations limit'] = 1000
+    # prob.driver.opt_settings['Major optimality tolerance'] = 1E-5
 
     # select design variables
     prob.driver.add_desvar('turbineX', scaler=1.0)
